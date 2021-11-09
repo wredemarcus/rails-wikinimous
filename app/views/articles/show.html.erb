@@ -1,0 +1,6 @@
+<h1> <%= @article.title %>  <%= link_to '🚮', article_path, method: 'delete', data: { confirmation: 'Please confirm the deletion process'} %></h1>
+<p> <%= @article.content %>  </p>
+
+<p><%= link_to 'Edit article', edit_article_path %></p>
+
+<p><%= link_to 'Get back to articles', articles_path %></p>
