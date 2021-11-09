@@ -1,11 +1,10 @@
-<div class="banner">
-  <h1>Wikinimous</h1>
-  <p><%= link_to 'Add an article', new_article_path %></p>
-</div>
+<%= render "header" %>
 
 <% @articles.each do |article| %>
-  <div class="article-container">
-    <h3><%= link_to article.title, article_path(article) %></h3>
-    <p> <%= article.content.split(" ")[0..10].join(" ") %> <p>
+  <div class="container">
+    <div class="article-container">
+      <h3><%= link_to article.title, article_path(article) %></h3>
+      <p> <%= article.content.split(" ")[0..10].join(" ") %> <p>
+    </div>
   </div>
 <% end %>
